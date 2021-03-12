@@ -1,0 +1,78 @@
+body {
+    background-color: #488ccd;
+    padding: 50px; /* belső margó */
+    width: 800px; /*fix szélességet meg kell adni, különben akkorára nő, amekkorára csak engedi a böngésző*/
+    /*de lehet 50% is, ez relatív érték*/
+    color: white;
+    margin: 0 auto; /* az elemet középre akarjuk igazítani automata margóval tesszük, de kell a fix szélesség. két oldalra állítja be*/
+    font-family: 'Montserrat', sans-serif;
+}
+.page-title {
+    font-size: 50px;
+    font-weight: 200;
+    margin-top: 40px; /* külső margó */
+    margin-bottom: 40px;
+}
+.main-menu {
+    background-color: #284c80;
+    width: 800px;
+    /*ha a padding kettő értéket kap, akkor az első az alul-felül */
+    /*a második pedig */
+    /* padding: 20px 0; */
+    padding: 0; /*azért kell levenni, mert alapból van benne valamennyi */
+}
+
+/*az inline elemeknek (pl. span) nem lehet beállítani magasságot, ezt az inline-block beállítással lehet kezelni, ekkor már megadhatunk magasságot.*/
+.main-menu-item {
+    display: inline-block;
+}
+
+/*.main-menu-item-en belüli a tag*/
+/*az a tag is inline elem*/
+.main-menu-item a {
+    display: block;
+    color: rgb(188, 248, 255);
+    margin-left: 20px;
+    padding: 20px 0; /*alul-felül, jobbra-balra*/
+    /*a menüpontoknak adunk belső margót, hogy a szöveg középre kerüljön*/
+}
+/*hover: amikor fölé visszük az egeret*/
+.main-menu-item a:hover {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.content-image-container {
+    text-align: center;
+}
+
+figcaption {
+    font-size: 12px;
+    color: #e6e6e6;
+    font-style: italic;
+  }
+  h1 {
+    font-size: 35px;
+    color: rgb(237, 245, 255);
+    margin-bottom: 5px;
+    margin-top: 100px;
+  }
+  .created-date {
+    margin-bottom: 40px;
+    font-style: italic;
+    color: #284c80;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .content-lead,
+  .content-body {
+    line-height: 1.7; /*sorköz*/
+  }
+  .content-lead {
+    font-size: 25px;
+    margin-bottom: 40px;
+  }
+  .content-body {
+    font-size: 18px;
+  }

@@ -1,0 +1,95 @@
+body {
+    background-color: black;
+}
+
+/* nav menu styling */
+.main-menu-container {
+    /* border-bottom: 1px solid white; */
+    width: 50%; 
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.main-menu-container .line {
+    border-bottom: 1px solid white;
+    width: 30%;
+    width: 80%;
+    margin-left: 60px;
+}
+.main-menu li, a, i {
+    color: white;
+    margin-left: 20px;
+    margin-top: 25px;
+    text-decoration-line: none;
+}
+.main-menu-item {
+    display: inline;
+    color: white;
+}
+.main-menu-item a {
+    text-align: center;
+}
+
+/*Használt betűtípusok:
+Verdana, Geneva, sans-serif
+Arial, Helvetica, sans-serif
+*/
+
+/* header styling */
+.page-title {
+    font-weight: 300;
+    padding-top: 60px;
+}
+.header-content-container i {
+    color: grey;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+.page-date {
+    margin-left: 10px;
+    color: grey;
+}
+
+/* main content styling */
+.main-content-container, 
+.header-content-container {
+    background-color: #333;
+    color: white;
+    font-family: Verdana;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 15px;
+    line-height: 20px;
+}
+.page-subtitle {
+    font-weight: 300;
+}
+.main-content-container p {
+    margin-top: 0;
+}
+.figure-img {
+    margin: 0 auto;
+    text-align: center;
+    color: rgb(150, 149, 149);
+    padding-bottom: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.blue {
+    align-items: center;
+}
+.figcaption {
+    font-style: italic;
+}
+
+/* footer styling */
+.page-footer {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 60px;
+}

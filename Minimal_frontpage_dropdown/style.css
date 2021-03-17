@@ -1,0 +1,89 @@
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+body {
+    background: rgb(72, 83, 112);
+    font-family: 'Roboto Condensed', sans-serif; /*a sans-serif legyen a következő betűtípus, ha a roboto nem jelenne meg*/
+}
+.main-menu-container {
+    text-align: center;
+    padding-top: 50px;
+}
+.main-menu {
+    margin: 0;
+    padding: 0;
+    border-bottom: 3px solid #68d2c3;
+    /* list-style: none; */
+}
+.main-menu-item {
+    display: inline-block; /* a list-style: none; helyett ez is leveszi a bullet pointokat. egy spec.peoperty, egyszerre tudjuk állítani a szélességét és a magasságát az elemeknek, amik egymás mellé fognak kerülni*/ 
+    width: 120px;
+    padding: 20px 0;
+    position: relative;
+    /*amit postition relative-ba teszünk, az abban lévő elemek ha position absolute-ba vannak, akkor ők ehhez az elemhez fognak pozícionálni*/
+}
+.main-menu-item,
+.main-menu-item a {
+  text-decoration: none;
+  color: #e9e4ff;
+  cursor: pointer;
+}
+.main-menu-item:hover {
+  background-color: rgba(41, 47, 48, 0.2);
+  color: white;
+}
+.submenu {
+    width: 200px;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 58px;
+    display: none;
+}
+.submenu-item {
+    list-style: none;
+    padding: 20px 0;
+}
+.submenu-item:hover {
+    background-color: rgba(41, 47, 48, 0.7);
+}
+/*a submenu csak akkor látszik, ha a main-menu-item-re hoverezünk*/
+/*a kacsacsőr azt jelenti, hogy a közvetlen gyereke*/
+.main-menu-item:hover > .submenu {
+    display: block;
+}
+.main-content {
+    color: white;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+header {
+    width: 400px;
+}
+h1 {
+    font-size: 30px;
+    padding: 0;
+    margin-bottom: 10px;
+}
+header p {
+    font-size: 22px;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+.company-image {
+    float: right;
+}
+main {
+    width: 580px;
+    line-height: 1.6;
+  }
+  footer {
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+

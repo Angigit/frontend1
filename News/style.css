@@ -1,0 +1,159 @@
+/*RESZPONZÍV OLDAL*/
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: rgb(242, 237, 228);
+    margin: 0;
+}
+header,
+main {
+    width: 80vw; /*% helyett megadható*/
+    /*vw hogy maximunmra nőjön*/
+    margin: 0 auto;
+}
+header {
+    /*amit flexbe rakunk az flex container, a közvetlen gyerekei ennek az elemnek flex itemek lesznek*/
+    /*display: inline-block helyett, ha egymás mellé akarjuk tenni az elemeket*/
+    /*hogy a logo és a menu konténer egymás mellé kerüljön*/
+    display: flex;
+}
+main {
+    margin-top: 1rem;
+  }
+  .logo {
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+  }
+  .logo > h1 {
+    font-size: 2.25rem;
+    margin: 0;
+    padding: 0;
+    border-bottom: 4px solid black;
+  }
+  .logo > h2 {
+    font-size: 1rem;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    font-style: italic;
+    line-height: 0;
+    color: rgba(90, 86, 79, 1);
+    letter-spacing: 0.3rem;
+  }
+
+.menu-container {
+    /*ezt csak flex item-ekre lehet rátenni - kitölti az összes helyet*/
+    /*mindig olyan széles lesz, amilyen széles csak lehet*/
+    flex-grow: 1;
+}
+.menu {
+    list-style: none;
+    display: flex; /*flexbox*/
+    /*a felsorolás ul behúzása miatt*/
+    padding: 0;
+}
+.menu-item {
+    flex-grow: 1;
+    /* margin-right: 1rem; ezt nem ide tesszük, hanem eggyel lejjebb */
+}
+.menu-item:not(:last-child) {
+    /*minden itemet kiválasztok, kivéve az utolsó itemet*/
+    margin-right: 1rem;
+}
+.menu-item:nth-child(1) {
+    border-bottom: 4px solid red;
+  }
+  .menu-item:nth-child(2) {
+    border-bottom: 4px solid lightblue;
+  }
+  .menu-item:nth-child(3) {
+    border-bottom: 4px solid plum;
+  }
+  .menu-item:nth-child(4) {
+    border-bottom: 4px solid green;
+  }
+  .menu-item:nth-child(5) {
+    border-bottom: 4px solid yellow;
+  }
+.menu-item a {
+    text-decoration: none;
+    color: black;
+    height: 2rem;
+    display: flex; /*az a tag a flex container, a benne lévő betűk az elemek*/
+    align-items: center; /*függőleges középre igazítása a flex-item elemeknek*/
+    justify-content: center; /*vízszintes középe igazítás a flex-item elemeknek*/
+}
+.menu-item:hover {
+    border-bottom: 4px solid transparent;
+    background-color: rgba(189, 198, 233, 0.56);
+}
+.main-article-image-container {
+    height: 40vw;
+    overflow: hidden; /*ne látszódjon az a rész, ami kilógna ebből az elemből*/
+}
+.main-article-image {
+    width: 100%;
+
+    /* ha nincsen image container div akkor így is le lehet vágni a képből */
+    /* height: 40vw;
+    object-fit: cover; */
+}
+.main-article {
+    /*ehhez az elemhez képest akarjuk pozícionálni a textet*/
+    position: relative;
+}
+.main-article-text {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-family: 'Merriweather', serif;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.767);
+}
+.main-article-text > h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 0;
+  }
+  .main-article-text > h2 {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6rem;
+  }
+  .tag {
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+  }
+  .tag i {
+    padding: 5px;
+  }
+  .tag-politics {
+    background-color: red;
+  }
+  .continue-to-article {
+    background-color: blue;
+    color: white;
+    font-style: italic;
+    font-size: 1rem;
+    padding: 7px;
+    float: right;
+    text-decoration: none;
+  }
+  .continue-to-article i {
+    padding-left: 0.8rem;
+  }
+
+
+
+
+
+
+
+
+
+

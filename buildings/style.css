@@ -1,0 +1,29 @@
+.offscreen {
+    clip-path: inset(100%);
+    clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; /* added line */
+    width: 1px;
+  }
+  /*tag-ek közül ő a legfelső*/
+  html {
+    /* font-size: 16px; default */
+    /* font-size: 100%; */
+    /* 10/16 = 0.625 */
+
+    font-size: 62.5%;
+
+    /*innentől 1rem = 10px*/
+    font-family: 'Heebo', sans-serif;
+    background-color: #333448;
+  }
+  body {
+      margin: 0;
+      background: url(./buildings_start/img/banner.jpg) no-repeat center 50px;
+      /*no-repeat: ne legyen ismétlés*/
+      background-size: 100%; /*a kép a böngésző szélességéhez fog igazodni*/
+      height: 1500px;
+  }

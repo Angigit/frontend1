@@ -21,6 +21,9 @@ header {
     /*display: inline-block helyett, ha egymás mellé akarjuk tenni az elemeket*/
     /*hogy a logo és a menu konténer egymás mellé kerüljön*/
     display: flex;
+    /*flexbox esetén:*/
+    /* flex-direction: row; egymás mellett lesznek az elemek */
+    /* flex-direction: column; egymás alá kerülnek az elemek */
 }
 main {
     margin-top: 1rem;
@@ -43,6 +46,10 @@ main {
     line-height: 0;
     color: rgba(90, 86, 79, 1);
     letter-spacing: 0.3rem;
+  }
+  .menu-checkbox,
+  .toggle-label {
+    display: none;
   }
 
 .menu-container {
@@ -149,9 +156,80 @@ main {
   }
 
 
+  /*gallery-images styling*/
+  .gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /*ahol kell ott törje meg*/
+  }
+  .gallery-item {
+    margin: 0.5rem;
+  }
+  .gallery-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /*hogy arányosak legyenek a képek*/
+  }
 
 
 
+
+
+
+  /*MEDIA QUERY*/
+
+  /* min-width: 960px -> 960 px fölött */
+
+  /* @media (max-width: 960px) and (min-width: 600px){} */
+
+  /* @media screen (max-width: 960px) */
+
+  @media (max-width: 960px){  /*a max-width-et át lehet írni max-height-ra is, tehát magasságra is lehet optimalizálni*/
+    header {
+      flex-direction: column;
+    }
+    .logo {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 900px){  
+    .main-article-text {
+      position: static; /*alapértelmezett position*/
+    }
+  }
+
+  @media (max-width: 700px){  
+    header {
+      margin-top: 2rem;
+    }
+    .logo {
+      width: 80%;
+    }
+    .menu {
+      flex-direction: column;
+      width: 100%;
+    }
+    .menu-item {
+      width: 100%;
+    }
+    .toggle-label {
+      font-size: 2rem;
+      margin-left: auto; /*jobbra igazítjuk, akkora lesz, amekkora csak lehet*/
+      cursor: pointer; /*ux miatt fontos!*/
+      margin-bottom: -65px; /*nem kell mindig position: absolute*/
+      display: block;
+    }
+    .menu-item a {
+      height: 3rem;
+    }
+    .menu-container {
+      display: none;
+    }
+    .menu-checkbox:checked ~ .menu-container {
+      display: flex;
+    }
+  }
 
 
 

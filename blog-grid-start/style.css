@@ -73,6 +73,11 @@ body {
   margin: 0;
 }
 
+.comments-count {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
 .main-title,
 .subheading,
 .main p,
@@ -114,11 +119,6 @@ body {
   height: calc(100% + 10px);
   position: absolute;
   left: -30px;
-}
-
-.comments-count {
-  margin-top: 1rem;
-  font-size: 2rem;
 }
 
 /* --------------------------------  comment section is grid  --------------------------------- */
@@ -224,7 +224,7 @@ input[name="name"] {
   text-transform: uppercase;
   border-radius: 50px;
   cursor: pointer;
-  -webkit-appearance: none;
+  -webkit-appearance: none; /* ez csak safarira érvényes */
 }
 
 .form-container input,
@@ -269,6 +269,7 @@ input[name="name"] {
   .form-container,
   .comment .author,
   .comment-text {
+    grid-column: sidebar / content-end;
   }
 
   .main .author {

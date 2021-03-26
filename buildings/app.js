@@ -17,3 +17,16 @@ document.querySelector('.close-menu').addEventListener('click', function () {
   document.querySelector('header .main-menu').classList.remove('js-show');
   document.querySelector('.close-menu').classList.add('js-hidden');
 });
+
+//minden esetben, amikor a user átméretezi a böngésző ablakot, lefut ez a kód
+window.addEventListener('resize', function () {
+  //megvizsgáljuk hogy a body-n rajta van-e a js-menu-open class
+  if (document.querySelector('body').classList.contains('js-menu-open')) {
+    //ez vagy igaz, vagy hamis értéket ad vissza
+    //ha nyitva van a menu, akkor megnézzük h a böngésző szélessége mekkora:
+    if (window.innerWidth >= 650) {
+      //ha 650px felett van a böngésző szélessége, akkor a js rákattint a menü bezárására
+      document.querySelector('.close-menu').click();
+    }
+  }
+});

@@ -1,273 +1,271 @@
 .offscreen {
-    clip-path: inset(100%);
-    clip: rect(1px 1px 1px 1px); /* IE 6/7 */
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap; /* added line */
-    width: 1px;
-  }
-  .no-selection {
-    user-select: none;
-    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
-    -moz-user-select: none; /* mozilla browsers */
-    -khtml-user-select: none; /* webkit (konqueror) browsers */
-    -ms-user-select: none; /* IE10+ */
-  }
+  clip-path: inset(100%);
+  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; /* added line */
+  width: 1px;
+}
+.no-selection {
+  user-select: none;
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
+}
 
-  /*tag-ek közül ő a legfelső*/
-  html {
-    /* font-size: 16px; default */
-    /* font-size: 100%; */
-    /* 10/16 = 0.625 */
+/*tag-ek közül ő a legfelső*/
+html {
+  /* font-size: 16px; default */
+  /* font-size: 100%; */
+  /* 10/16 = 0.625 */
 
-    font-size: 62.5%;
+  font-size: 62.5%;
 
-    /*innentől 1rem = 10px*/
-    font-family: 'Heebo', sans-serif;
-    background-color: #333448;
-  }
-  body {
-      margin: 0;
-      background: url(./img/banner.jpg) no-repeat center 50px/100%;
-      /*no-repeat: ne legyen ismétlés*/
-      /* vagy / jellel adjuk meg a méretet, vagy külön a background-size-al */      
-      /* background-size: 100%; */ /*a kép a böngésző szélességéhez fog igazodni*/
-      height: 1500px;
-      position: relative;
-      right: 0;
-      transition: right 0.5s ease-in-out;
-      overflow-x: hidden; /*a vízszintes scroll bar így nem fog megjelenni*/
-  }
-  header {
-    background-color: #fff;
-    padding: 0 10vw;
-  }
-  .header-container {
-    display: flex;
-    height: 7rem; /*70px*/
+  /*innentől 1rem = 10px*/
+  font-family: "Heebo", sans-serif;
+  background-color: #333448;
+}
+body {
+  margin: 0;
+  background: url(./img/banner.jpg) no-repeat center 50px/100%;
+  /*no-repeat: ne legyen ismétlés*/
+  /* vagy / jellel adjuk meg a méretet, vagy külön a background-size-al */
+  /* background-size: 100%; */ /*a kép a böngésző szélességéhez fog igazodni*/
+  height: 1500px;
+  position: relative;
+  right: 0;
+  transition: right 0.5s ease-in-out;
+  overflow-x: hidden; /*a vízszintes scroll bar így nem fog megjelenni*/
+}
+header {
+  background-color: #fff;
+  padding: 0 10vw;
+}
+.header-container {
+  display: flex;
+  height: 7rem; /*70px*/
 
-    /*függőleges középre igazítás*/
-    align-items: center;
-  }
-  .menu-button {
-    font-size: 4rem;
-    margin: 10px;
-    display: none;
-  }
-  .logo {
-    background-color: #036cd8;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-    order: 1;
-  }
-  .logo a {
-    color: white;
-    font-family: 'Pathway Gothic One', sans-serif;
-    font-size: 4rem;
-    text-decoration: none;
-  }
-  .close-menu {
-    /* display: none; */
-    font-size: 3rem;
-text-align: right;
-margin-right: 20px;
-cursor: pointer;
-align-self: flex-end;
-  }
-  .main-menu {
-    flex-grow: 1;
-    height: 100%;
-    order: 2;
-  }
-  .main-menu ul {
-    display: flex;
-    list-style: none;
-    margin: 0; /*az alapért formázást levesszük*/
-    padding: 0; /*az alapért formázást levesszük*/
-    height: 100%;
-  }
-  .main-menu ul li {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%; /*nem tudjuk kell-e még*/
-  }
-  /*az li-ben lévő elem után rakja*/
-  .main-menu ul li::after {
-    content: "~";
-    font-size: 1.5rem; /*15px*/
-    font-weight: bold;
-    color: #caab4e;
-  }
-  .main-menu ul li:last-child::after{
-    /* ha display: none lenne, akkor ez az elem nem létezne */
-    visibility: hidden; /*így viszont létezik, csak nem látszik*/
-  }
-  .main-menu ul li a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    color: black;
-    font-weight: bold;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .search-bar {
-    /*ehhez képest akarjuk pozícionálni a kereső gombot*/
-    position: relative;
-    flex-grow: 0.5;
-    order: 3;
-  }
-  .search-field {
-    width: 100%;
-    border: 1px solid #e0e0e0;
-    font-size: 1.6rem;
-    height: 3rem;
-    padding-left: 10px; /*ha elkezdi írni a szöveget ennyivel beljebb kezdődik*/
-    padding-right: 30px;
-    box-sizing: border-box; /*a szélesség tisztán 100% és már nem emeli meg semmi - Internet 6-os verzió miatt*/
-  }
-  /* ha mindenre rárakjuk a box-sizing-ot, akkor sem a szélességet sem a magasságot nem emeli meg semmi
+  /*függőleges középre igazítás*/
+  align-items: center;
+}
+.menu-button {
+  font-size: 4rem;
+  margin: 10px;
+  display: none;
+}
+.logo {
+  background-color: #036cd8;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  order: 1;
+}
+.logo a {
+  color: white;
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 4rem;
+  text-decoration: none;
+}
+.close-menu {
+  /* display: none; */
+  font-size: 3rem;
+  text-align: right;
+  margin-right: 20px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+.main-menu {
+  flex-grow: 1;
+  height: 100%;
+  order: 2;
+}
+.main-menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0; /*az alapért formázást levesszük*/
+  padding: 0; /*az alapért formázást levesszük*/
+  height: 100%;
+}
+.main-menu ul li {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%; /*nem tudjuk kell-e még*/
+}
+/*az li-ben lévő elem után rakja*/
+.main-menu ul li::after {
+  content: "~";
+  font-size: 1.5rem; /*15px*/
+  font-weight: bold;
+  color: #caab4e;
+}
+.main-menu ul li:last-child::after {
+  /* ha display: none lenne, akkor ez az elem nem létezne */
+  visibility: hidden; /*így viszont létezik, csak nem látszik*/
+}
+.main-menu ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-bar {
+  /*ehhez képest akarjuk pozícionálni a kereső gombot*/
+  position: relative;
+  flex-grow: 0.5;
+  order: 3;
+}
+.search-field {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  font-size: 1.6rem;
+  height: 3rem;
+  padding-left: 10px; /*ha elkezdi írni a szöveget ennyivel beljebb kezdődik*/
+  padding-right: 30px;
+  box-sizing: border-box; /*a szélesség tisztán 100% és már nem emeli meg semmi - Internet 6-os verzió miatt*/
+}
+/* ha mindenre rárakjuk a box-sizing-ot, akkor sem a szélességet sem a magasságot nem emeli meg semmi
   * {
     box-sizing: border-box;
   } */
-  .search-button {
-    position: absolute;
-    top: 5px;
-    right: 7px;
-    border: none;
-    background-image: url(./img/search.png);
-    background-color: transparent;
-    background-size: 100%;
-    width: 20px;
-    height: 20px;
+.search-button {
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  border: none;
+  background-image: url(./img/search.png);
+  background-color: transparent;
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+}
+.search-field::placeholder {
+  color: #c4c4c4;
+}
+.search-field:focus {
+  outline: none; /*akadálymentes weboldal esetén ne használjuk, ez nem accessibility friendly*/
+}
+.title {
+  padding-top: 20vh;
+}
+.page-title {
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1rem;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(92, 138, 208);
+  background-color: rgba(36, 53, 78, 0.34);
+  width: 80vw;
+  margin: 0 auto;
+  padding: 6rem 0;
+  border: 1px solid rgb(174, 255, 255);
+  border: 1px solid rgba(174, 255, 255, 0.68);
+  color: white;
+}
+.page-subtitle {
+  text-align: center;
+  color: #0091ff;
+  background-color: #fff;
+  width: 30vw;
+  padding: 2rem 0;
+  margin: -20px auto 0 auto;
+  border-top: 3px solid #0091ff;
+  font-size: 2rem;
+}
+
+/*1200px alatt*/
+@media (max-width: 1200px) {
+  header {
+    padding: 0;
   }
-  .search-field::placeholder {
-    color: #c4c4c4;
+  header .search-bar {
+    margin-right: 40px;
   }
-  .search-field:focus {
-    outline: none; /*akadálymentes weboldal esetén ne használjuk, ez nem accessibility friendly*/
+}
+
+/*960px alatt*/
+@media (max-width: 960px) {
+  .header-container {
+    flex-wrap: wrap;
+    height: auto;
   }
-  .title {
-    padding-top: 20vh;
+  .logo {
+    order: 1;
+    padding: 7px;
   }
-  .page-title {
-    font-size: 8rem;
-    text-transform: uppercase;
-    font-family: 'Lato', sans-serif;
-    letter-spacing: 1rem;
-    text-align: center;
-    font-weight: bold;
-    background-color: rgb(92, 138, 208);
-    background-color: rgba(36, 53, 78, 0.34);
-    width: 80vw;
-    margin: 0 auto;
-    padding: 6rem 0;
-    border: 1px solid rgb(174, 255, 255);
-    border: 1px solid rgba(174, 255, 255, 0.68);
+  header .search-bar {
+    order: 2;
+    margin-left: auto; /*auto = a bal margó akkora lesz amekkora csak lehet*/
+  }
+  header .main-menu {
+    order: 3;
+    height: 6rem;
+    width: 100%;
+  }
+}
+
+/*650 px alatt*/
+@media (max-width: 650px) {
+  header .main-menu {
+    display: none;
+    position: absolute; /*a bodyhoz képest pozícionáljuk ezt az elemet*/
+    top: 10px;
+    right: -50%; /*mivel a body-t eltoltuk 50%-kal így a menüt vissza */
+    flex-direction: column;
+    width: 50%; /*a böngészőnek a fele*/
+  }
+  .main-menu ul li:not(:last-child)::after {
+    content: "";
+  }
+  header .main-menu ul {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .main-menu ul li {
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+  header .main-menu ul li a {
     color: white;
   }
-  .page-subtitle {
-    text-align: center;
-    color: #0091ff;
-    background-color: #fff;
-    width: 30vw;
-    padding: 2rem 0;
-    margin: -20px auto 0 auto;
-    border-top: 3px solid #0091ff;
-    font-size: 2rem;
-  }
 
-  /*1200px alatt*/
-  @media (max-width: 1200px) {
-    header {
-      padding: 0;
-    }
-    header .search-bar {
-      margin-right: 40px;
-    }
-  }
-
-  /*960px alatt*/
-  @media (max-width: 960px) {
-    .header-container {
-      flex-wrap: wrap;
-      height: auto;
-    }
-    .logo {
-      order: 1;
-      padding: 7px;
-    }
-    header .search-bar {
-      order: 2;
-      margin-left: auto; /*auto = a bal margó akkora lesz amekkora csak lehet*/
-    }
-    header .main-menu {
-      order: 3;
-      height: 6rem;
-      width: 100%;
-    }
-  }
-
-  /*650 px alatt*/
-  @media (max-width: 650px) {
-    header .main-menu {
-      display: none;
-      position: absolute; /*a bodyhoz képest pozícionáljuk ezt az elemet*/
-      top: 10px;
-      right: -50%; /*mivel a body-t eltoltuk 50%-kal így a menüt vissza */
-      flex-direction: column;
-      width: 50%; /*a böngészőnek a fele*/
-    }
-    .main-menu ul li:not(:last-child)::after {
-      content: "";
-    }
-    header .main-menu ul {
-      flex-direction: column;
-      margin-top: 20px;
-    }
-    .main-menu ul li {
-      margin-bottom: 20px;
-      justify-content: center;
-    }
-    header .main-menu ul li a {
-      color: white;
-    }
-
-    .menu-button {
-      display: block;
-      order: 3;
-      height: 46px;
-      cursor: pointer;
-    }
-    .logo {
-      padding: 17px; /*így kitölti az összes helyet*/
-    }
-    .close-menu {
-      color: white;
-    }
-  }
-
-
-  /* JS specific code should always be at the end of this file */
-  .js-hidden {
-    display: none;
-  }
-
-  /* increasing specificity by 1 to make this selector */
-  .main-menu.js-show {
+  .menu-button {
     display: block;
+    order: 3;
+    height: 46px;
+    cursor: pointer;
   }
-
-  .js-menu-open {
-    right: 50%;
+  .logo {
+    padding: 17px; /*így kitölti az összes helyet*/
   }
+  .close-menu {
+    color: white;
+  }
+}
 
+/* JS specific code should always be at the end of this file */
+.js-hidden {
+  display: none;
+}
+
+/* increasing specificity by 1 to make this selector */
+.main-menu.js-show {
+  display: block;
+}
+
+.js-menu-open {
+  right: 50%;
+}

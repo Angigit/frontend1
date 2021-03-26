@@ -1,0 +1,81 @@
+.no-selection {
+  user-select: none;
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.js-form-item.js-form-type-checkbox {
+  color: white;
+  background: #2e2358;
+  font-size: 20px;
+  padding: 10px;
+  position: relative;
+}
+
+.js-form-item.js-form-type-checkbox input,
+.js-form-item.js-form-type-checkbox label {
+  cursor: pointer;
+}
+
+.js-form-item.js-form-type-checkbox input {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* hide the original checkbox as we dont need it  */
+  opacity: 0;
+  /* pointer-events: none; */
+}
+/* before is the tick, after is the box */
+[type="checkbox"] + label::before,
+[type="checkbox"] + label::after {
+  content: "";
+  position: absolute;
+  border-radius: 2px;
+  /* background-color: yellow; */
+  /* https://stackoverflow.com/questions/40530101/why-is-translatey-50-needed-to-center-an-element-which-is-at-top-50  */
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  transition: 0.2s;
+}
+/* if the box is not checked just display it with border  */
+[type="checkbox"]:not(:checked) + label::after {
+  height: 20px;
+  width: 20px;
+  border: 2px solid white;
+  z-index: 0;
+}
+/* if the box is not checked just display it with border and background  */
+[type="checkbox"]:checked + label::after {
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  background-color: #26a69a;
+}
+/* if the box is checked, display the tick which is created with border */
+[type="checkbox"]:checked + label::before {
+  top: calc(50% - 7px);
+  right: 21px;
+  z-index: 1;
+  width: 5px;
+  height: 11px;
+  transform: rotateZ(37deg);
+  /* rotation pivot point  */
+  transform-origin: 100% 100%;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}

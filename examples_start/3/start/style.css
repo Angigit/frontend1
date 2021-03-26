@@ -1,0 +1,106 @@
+/* this takes care of the red border size at its initial size
+without this option the borer would make the box bigger than its
+oriiginal size, because of the box model */
+
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font: 400 16px/1.5em "Open Sans", sans-serif;
+  color: #606366;
+}
+
+h6,
+.fs_large {
+  font-size: 1.125em;
+  line-height: 1em;
+}
+
+.fs_medium,
+.accordion_item .icon-plus {
+  font-size: 0.875em;
+}
+
+#block-views-block-termekek-szolgaltatasok-block-1 {
+  width: 300px;
+}
+
+#block-views-block-termekek-szolgaltatasok-block-1 .views-row .item-box {
+  padding-left: 70px;
+  /* position everything inside, relative to this element */
+  position: relative;
+}
+
+#block-views-block-termekek-szolgaltatasok-block-1 .views-row .item-box a {
+  color: #34383d;
+}
+
+#block-views-block-termekek-szolgaltatasok-block-1 .views-row .item-box h6 {
+  margin-bottom: 5px;
+}
+
+#block-views-block-termekek-szolgaltatasok-block-1 .views-row .item-box .read-more {
+  margin-top: 15px;
+}
+
+/* position the icon to the left , inner items should be centered*/
+
+#block-views-block-termekek-szolgaltatasok-block-1 .views-row .left-icon {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #a255c4;
+  border-radius: 50%;
+  line-height: 48px;
+  color: #a255c4;
+}
+
+/* animate the icons  */
+#block-views-block-termekek-szolgaltatasok-block-1 .views-row .left-icon i,
+#block-views-block-termekek-szolgaltatasok-block-1 .views-row .left-icon svg {
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  width: 48px;
+  font-size: 25px;
+}
+
+/* make the icon white on hover */
+#block-views-block-termekek-szolgaltatasok-block-1 .views-row h6:hover i,
+#block-views-block-termekek-szolgaltatasok-block-1 .views-row h6:hover svg {
+}
+
+/* inner items should be centered  */
+#block-views-block-termekek-szolgaltatasok-block-1 .views-row .left-icon .fontawesome-icon {
+  /* svg by default is inline, and thus reacts to line-height,  */
+  /* this is why the svg is not centered */
+  /* you can remove the line height by applying line-height 0 to the parent element, */
+  /* or applying display block on the element itself. */
+}
+
+/* create the circles, animate them */
+#block-views-block-termekek-szolgaltatasok-block-1 .views-row .left-icon .fontawesome-icon::after,
+#block-views-block-termekek-szolgaltatasok-block-1 .views-row .left-icon .fontawesome-icon::before {
+}
+
+/* create the white circle, add transition delay  */
+#block-views-block-termekek-szolgaltatasok-block-1 .views-row .left-icon .fontawesome-icon::after {
+  border-color: #fff;
+  border: 1px solid white;
+}
+
+/* animate the white ring */
+#block-views-block-termekek-szolgaltatasok-block-1 .views-row h6:hover .fontawesome-icon::after {
+}
+
+/* animate the purple background  */
+#block-views-block-termekek-szolgaltatasok-block-1 .views-row h6:hover .fontawesome-icon::before {
+  background: #a255c4;
+}
+
+

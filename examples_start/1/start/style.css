@@ -1,0 +1,66 @@
+.chapter-1-circle {
+  border: 6px solid #1ca1af;
+}
+.chapter-1-circle:hover {
+  background-color: #1ca1af;
+}
+.chapter-2-circle {
+  border: 6px solid #52c5ac;
+}
+.chapter-2-circle:hover {
+  background-color: #52c5ac;
+}
+.chapter-3-circle {
+  border: 6px solid #b4c652;
+}
+.chapter-3-circle:hover {
+  background-color: #b4c652;
+}
+.chapter-4-circle {
+  border: 6px solid #00496c;
+}
+.chapter-4-circle:hover {
+  background-color: #00496c;
+}
+.chapter-5-circle {
+  border: 6px solid #c00505;
+}
+.chapter-5-circle:hover {
+  background-color: #c00505;
+}
+.chapter-6-circle {
+  border: 6px solid #e06c31;
+}
+.chapter-6-circle:hover {
+  background-color: #e06c31;
+}
+.chapter-7-circle {
+  border: 6px solid #703938;
+}
+.chapter-7-circle:hover {
+  background-color: #703938;
+}
+
+/* kiválasztjuk azt a html elemet amelynek a class attr úgy kezdődik hogy chapter- és arra végződik hogy -circle */
+[class^="chapter-"][class$="-circle"] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.chapter {
+  position: relative;
+}
+
+.chapter-text {
+  display: none;
+  position: absolute;
+  top: 25px;
+}
+
+/* minden olyan chapter text ami egy olyan karika után jön amire hovereztünk */
+[class^="chapter-"][class$="-circle"]:hover + .chapter-text {
+  display: block;
+}

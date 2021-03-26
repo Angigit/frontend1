@@ -1,0 +1,149 @@
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* this takes care of the red border size at its initial size
+ without this option the borer would make the box bigger than its
+ oriiginal size, because of the box model */
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after,
+*:hover {
+  box-sizing: border-box;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 300px;
+}
+
+#block-views-block-termekvalasztekunk-block-1 .block-title,
+#block-views-block-termekvalasztekunk-block-1 .view-header {
+  text-align: center;
+}
+
+#block-views-block-termekvalasztekunk-block-1 .block-title {
+  font-size: 30px;
+}
+
+#block-views-block-termekvalasztekunk-block-1 .view-header {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* format links  */
+#block-views-block-termekvalasztekunk-block-1 .views-row .field-content a {
+  text-decoration: none;
+}
+
+/* TODO styling for links inside boxes */
+#block-views-block-termekvalasztekunk-block-1 .view-content .views-row .hovergroup a {
+  font-size: 13px;
+  color: black;
+}
+
+#block-views-block-termekvalasztekunk-block-1 .view-termekvalasztekunk > .view-content {
+  padding-top: 20px;
+
+  /* TODO main boxes should be flex */
+}
+
+#block-views-block-termekvalasztekunk-block-1 .view-content .views-row .hovergroup .views-row {
+  text-align: left;
+}
+
+#block-views-block-termekvalasztekunk-block-1 .view-content .views-row .hovergroup .views-row,
+#block-views-block-termekvalasztekunk-block-1 .view-content .views-row .hovergroup .view-content {
+  /* set up space between the items inside the box  */
+  padding-top: 0;
+  padding-bottom: 7px;
+}
+
+/* TODO Mindent ehhez akarunk pozicionálni absolute-al */
+#block-views-block-termekvalasztekunk-block-1 .view-content .views-row .category-box {
+  margin-left: 1.5vw;
+  margin-bottom: 1.5vw;
+}
+
+/* TODO position inner title inside image boxes  */
+#block-views-block-termekvalasztekunk-block-1 .view-content .views-row .category-text {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 29px;
+  text-transform: uppercase;
+  text-align: left;
+
+  /* category text dissapears on hover,
+  has to have an initial value for transitions */
+  opacity: 1;
+}
+
+/* TODO position inner content inside image boxes  */
+#block-views-block-termekvalasztekunk-block-1 .view-content .views-row .hovergroup {
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+  font-weight: bold;
+  opacity: 0;
+}
+
+#block-views-block-termekvalasztekunk-block-1 .view-content .views-row .category-img img {
+  /* http://loopj.com/2008/06/16/removing-gaps-under-images-in-css/ */
+  display: block;
+}
+
+/* darken overlay on category image (red only comes on hover...) */
+#block-views-block-termekvalasztekunk-block-1 .view-content .views-row .category-img::after {
+}
+
+/* add red background on hover */
+#block-views-block-termekvalasztekunk-block-1 .view-content .views-row:hover .category-box .category-img::after,
+#block-views-block-termekvalasztekunk-block-1 .view-content .views-row:focus .category-box .category-img::after {
+  /* background: rgba(181, 41, 51, 0.5); */
+}
+
+/* the red border on hover  */
+#block-views-block-termekvalasztekunk-block-1 .view-content .views-row .category-box::after {
+}
+
+/* shift the red border on hover
+ active and focus are added so hover works on touch as well */
+#block-views-block-termekvalasztekunk-block-1 .view-content .views-row:hover .category-box::after,
+#block-views-block-termekvalasztekunk-block-1 .view-content .views-row:focus .category-box::after {
+}
+
+/* scale category-box content on hover */
+#block-views-block-termekvalasztekunk-block-1 .views-row:hover .category-box,
+#block-views-block-termekvalasztekunk-block-1 .views-row:focus .category-box {
+  /* background: #cc424c; */
+}
+
+#block-views-block-termekvalasztekunk-block-1 .views-row .field-content a:hover,
+#block-views-block-termekvalasztekunk-block-1 .views-row .field-content a:focus {
+  text-decoration: underline;
+}
+
+/* inside boxes title is hidden on hover */
+#block-views-block-termekvalasztekunk-block-1 .views-row:hover .category-box .category-text,
+#block-views-block-termekvalasztekunk-block-1 .views-row:focus .category-box .category-text {
+}
+
+/* display content inside boxes on hover  */
+#block-views-block-termekvalasztekunk-block-1 .views-row:hover .category-box .hovergroup,
+#block-views-block-termekvalasztekunk-block-1 .views-row:focus .category-box .hovergroup {
+}
+
+@media (max-width: 580px) {
+  #block-views-block-termekvalasztekunk-block-1 .view-content {
+    justify-content: center;
+  }
+
+  #block-views-block-termekvalasztekunk-block-1 .block-title {
+    font-size: 20px;
+  }
+}

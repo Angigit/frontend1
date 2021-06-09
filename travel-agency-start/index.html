@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Mukta+Malar"
+      rel="stylesheet"
+    />
+
+    <!-- beware of minified! it's smaller -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <!-- beware of minified! it's smaller -->
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>TravelAnytime</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./logo.png" alt="" />
+      </div>
+      <nav class="main-menu">
+        <ul>
+          <li class="menu-item"><a href="#">Book Now</a></li>
+          <li class="menu-item"><a href="#">Browse Tours</a></li>
+          <li class="menu-item"><a href="#">About Us</a></li>
+          <li class="menu-item"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- slideshow goes here!!!! -->
+
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="banner-text">Travel to beautiful places</div>
+          <img class="banner-image" src="./1.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <div class="banner-text">Visit unbelivable mountains</div>
+          <img class="banner-image" src="./2.jpg" alt="" />
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <!-- <div class="swiper-pagination"></div> -->
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+
+    <!-- reserve now button is floating above the slideshow -->
+    <div class="reserve-button">
+      <a data-scroll href="#reserve">Reserve Now</a>
+    </div>
+
+    <main class="clearfix">
+      <div class="main-content">
+        <h1>Welcome to our agency!</h1>
+        Dolor assumenda sed voluptate eveniet provident, lorem ad. Odit
+        necessitatibus nobis modi explicabo nisi. Accusamus ab consectetur
+        possimus reprehenderit deserunt tenetur. Minus consequuntur nulla libero
+        eaque hic. Reprehenderit voluptatem dicta consectetur autem cumque eos
+        temporibus ipsum. Perferendis similique delectus eveniet saepe
+        consequuntur Minus aut est dolorum obcaecati sunt dolores Nam.
+      </div>
+      <div class="main-image">
+        <a href="./office.jpg" class="popup-image">
+          <img src="./office.jpg" alt="" />
+        </a>
+      </div>
+    </main>
+
+    <div class="trips-count">
+      <h1>We have</h1>
+      <span class="counter">567</span>
+      <h1>Trips available</h1>
+    </div>
+
+    <div id="reserve" class="reserve-container">
+      <h1>Find yourself a date now</h1>
+      <form class="reserve">
+        <!--
+        default html5 datepicker is also there! but flatpickr is more flexible!
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date
+      -->
+        <input type="text" class="datepicker" placeholder="Start date" />
+        <input type="text" class="datepicker" placeholder="End date" />
+        <input class="submit-dates" type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <div class="gallery">
+      <h1>Check out the options</h1>
+      <div class="gallery-item">
+        <div class="flipper">
+          <div class="front">
+            <img
+              class="gallery-image"
+              src="./thumbnails/bali-small.jpg"
+              alt=""
+            />
+          </div>
+          <div class="back">
+            <div class="back-title">Bali trip</div>
+            <div class="back-text">
+              Adipisicing obcaecati harum consequuntur ipsum sapiente?
+            </div>
+            <div class="back-price">From 2000 &euro;</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img class="gallery-image" src="./thumbnails/brugge-small.jpg" alt="" />
+      </div>
+      <div class="gallery-item">
+        <img class="gallery-image" src="./thumbnails/egypt-small.jpg" alt="" />
+      </div>
+      <div class="gallery-item">
+        <img class="gallery-image" src="./thumbnails/france-small.jpg" alt="" />
+      </div>
+      <div class="gallery-item">
+        <img
+          class="gallery-image"
+          src="./thumbnails/hallstadt-small.jpg"
+          alt=""
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          class="gallery-image"
+          src="./thumbnails/mattenhorn-small.jpg"
+          alt=""
+        />
+      </div>
+      <div class="gallery-item">
+        <img class="gallery-image" src="./thumbnails/sidney-small.jpg" alt="" />
+      </div>
+      <div class="gallery-item">
+        <img class="gallery-image" src="./thumbnails/naples-small.jpg" alt="" />
+      </div>
+      <div class="gallery-item">
+        <img
+          class="gallery-image"
+          src="./thumbnails/manhattan-small.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <footer>&copy; Copyright Travel Anytime 2018</footer>
+    <script src="./app.js"></script>
+  </body>
+</html>
